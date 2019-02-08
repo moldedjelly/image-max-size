@@ -59,6 +59,10 @@ class ImageMaxSize extends Plugin
         parent::init();
         self::$plugin = $this;
 
+        $this->setComponents([
+            'service' => \moldedjelly\imagemaxsize\services\Service::class,
+        ]);
+
         Event::on(
             Asset::class,
             Asset::EVENT_BEFORE_HANDLE_FILE,
