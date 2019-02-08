@@ -35,9 +35,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "???",
-        "components": {
-            "imageMaxSize": "moldedjelly\\imagemaxsize\\services\\ImageMaxSize"
-        },
         "class": "moldedjelly\\imagemaxsize\\ImageMaxSize"
     }
 }

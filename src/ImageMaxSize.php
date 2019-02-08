@@ -10,7 +10,7 @@
 
 namespace moldedjelly\imagemaxsize;
 
-use moldedjelly\imagemaxsize\services\ImageMaxSize as ImageMaxSizeService;
+use moldedjelly\imagemaxsize\services\Service;
 
 use Craft;
 use craft\base\Plugin;
@@ -28,7 +28,7 @@ use yii\base\Event;
  * @package   ImageMaxSize
  * @since     1.0.0
  *
- * @property  ImageMaxSizeService $imageMaxSize
+ * @property  Service $service
  */
 class ImageMaxSize extends Plugin
 {
@@ -63,7 +63,7 @@ class ImageMaxSize extends Plugin
             Asset::class,
             Asset::EVENT_BEFORE_HANDLE_FILE,
             function(AssetEvent $event) {
-              ImageMaxSize::getInstance()->imageMaxSize->beforeHandleAssetFile($event);
+              ImageMaxSize::getInstance()->service->beforeHandleAssetFile($event);
             }
         );
 

@@ -25,7 +25,7 @@ use craft\helpers\Image as ImageHelper;
  * @package   ImageMaxSize
  * @since     1.0.0
  */
-class ImageMaxSize extends Component
+class Service extends Component
 {
     // Public Methods
     // =========================================================================
