@@ -1,0 +1,43 @@
+{
+    "name": "moldedjelly/image-max-size",
+    "description": "Image Max Size",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "imagemaxsize"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mat Johnson",
+            "homepage": "http://moldedjelly.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "moldedjelly\\imagemaxsize\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "ImageMaxSize",
+        "handle": "image-max-size",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "components": {
+            "imageMaxSize": "moldedjelly\\imagemaxsize\\services\\ImageMaxSize"
+        },
+        "class": "moldedjelly\\imagemaxsize\\ImageMaxSize"
+    }
+}
