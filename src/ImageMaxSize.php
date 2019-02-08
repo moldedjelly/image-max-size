@@ -16,6 +16,7 @@ use Craft;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
+use craft\elements\Asset;
 use craft\events\AssetEvent;
 
 use yii\base\Event;
