@@ -20,6 +20,8 @@ use craft\events\AssetEvent;
 use craft\events\RegisterElementActionsEvent;
 use craft\helpers\Image as ImageHelper;
 
+use yii\web\BadRequestHttpException;
+
 /**
  * @author    Mat Johnson
  * @package   ImageMaxSize
@@ -39,9 +41,14 @@ class Service extends Component
             return;
         }
 
+        // Should we be modifying images in this source?
+        if (!ImageHelper::canManipulateAsImage(@pathinfo($path, PATHINFO_EXTENSION))) {
+            return false;
+        }
+
         list($width, $height, $type, $attr) = getimagesize($path);
         if ($width > 6000 || $height > 6000) {
-          die("big!");
+          throw new BadRequestHttpException('Image "'.$filename.'" is too big!');
         }
     }
 
