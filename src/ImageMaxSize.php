@@ -62,7 +62,7 @@ class ImageMaxSize extends Plugin
             Asset::class,
             Asset::EVENT_BEFORE_HANDLE_FILE,
             function(AssetEvent $event) {
-              ImageMaxSize::getInstance()->imageMaxSize->bar()
+              ImageMaxSize::getInstance()->imageMaxSize->beforeHandleAssetFile($event);
             }
         );
 
