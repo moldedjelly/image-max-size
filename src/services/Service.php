@@ -48,7 +48,7 @@ class Service extends Component
 
         list($width, $height, $type, $attr) = getimagesize($path);
         if ($width > 6000 || $height > 6000) {
-          throw new BadRequestHttpException('Image "'.$filename.'" is too big!');
+          throw new BadRequestHttpException('Image "'.$filename.'" is too big! (it\'s '.$width.'x'.$height.' but must fit within 6000x6000)');
         }
     }
 
